@@ -390,25 +390,6 @@ const alltrades = (orders) => {
       };
     }
 
-    const selectedProperties = {
-      Property1: order.Property1,
-      Symbol: order.Symbol,
-      DateTime: order.DateTime,
-      Quantity: order.Quantity,
-      TradePrice: order.TradePrice,
-      TradeMoney: order.TradeMoney,
-      BuySell: order.BuySell,
-      ClientAccountID: order.ClientAccountID,
-      Description: order.Description,
-      TradeID: order.TradeID,
-      IBCommission: order.IBCommission,
-      NetCash: order.NetCash,
-      OpenCloseIndicator: order.OpenCloseIndicator,
-      CostBasis: order.CostBasis,
-      OrderType: order.OrderType,
-    };
-
-    trades[Symbol].Orders.push(selectedProperties);
     trades[Symbol].TradeQuantity += Quantity;
     trades[Symbol].TradeResult = parseFloat((trades[Symbol].TradeResult + TradeMoney).toFixed(2));
     trades[Symbol].BrokerCommission = parseFloat((trades[Symbol].BrokerCommission + IBCommission).toFixed(2));
